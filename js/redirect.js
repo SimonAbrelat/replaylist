@@ -1,5 +1,9 @@
 (() => {
-    const queryString = window.location.search;
+    const queryString = window.location.href;
+    arr = queryString.split("#")[1].split("&");
+    if (arr.length < 3) {
+        alert("Login Failed.")
+    }
     const urlParams = new URLSearchParams(queryString);
     console.log(urlParams);
     if (!urlParams.has('access_token')) {
@@ -7,9 +11,9 @@
         //location.assign("https://simonabrelat.github.io/replaylist")
     }
 
-    sessionStorage.setItem("tok", urlParams.get('access_token'));
-    sessionStorage.setItem("tok_type", urlParams.get('token_type'));
-    sessionStorage.setItem("expires", urlParams.get('expires_in'));
+    sessionStorage.setItem("tok", arr[0].split("=")[1]);
+    sessionStorage.setItem("tok_type", arr[1].split("=")[1]);
+    sessionStorage.setItem("expires", arr[2].split("=")[1]);
 
     //location.assign("https://simonabrelat.github.io/replaylist/recorder.html")
 })()
