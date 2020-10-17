@@ -1,3 +1,7 @@
+const tok = sessionStorage.getItem("tok");
+const tok_type = sessionStorage.getItem("tok_type");
+const expires = sessionStorage.getItem("expires");
+
 const Spotify = function(key) {
     this.key = key;
     this.user_id;
@@ -38,5 +42,3 @@ const Spotify = function(key) {
         var jsonParameters = JSON.stringify(parameters);
     }
 }
-
-var spotify = null;

@@ -6,11 +6,10 @@
         alert("Login failed.")
         //location.assign("https://simonabrelat.github.io/replaylist")
     }
-    const tok = urlParams.get('access_token');
-    const tok_type = urlParams.get('token_type');
-    const expires = urlParams.get('expires_in');
 
-    spotify = new Spotify(tok);
+    sessionStorage.setItem("tok", urlParams.get('access_token'));
+    sessionStorage.setItem("tok_type", urlParams.get('token_type'));
+    sessionStorage.setItem("expires", urlParams.get('expires_in'));
 
     location.assign("https://simonabrelat.github.io/replaylist/recorder.html")
 })()
