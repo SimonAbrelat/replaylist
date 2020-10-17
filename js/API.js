@@ -10,7 +10,7 @@ class Spotify {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + key
+                'Authorization': 'Bearer ' + this.key
             }
         })
     }
@@ -30,7 +30,7 @@ class Spotify {
     }
 
     getPlaylists() {
-        this.get('https://api.spotify.com/v1/users/' + user_id + '/playlists')
+        this.get('https://api.spotify.com/v1/users/' + this.user_id + '/playlists')
         .then(res => {
                 console.log(res);
         })
