@@ -3,6 +3,7 @@
     const urlParams = new URLSearchParams(queryString);
     console.log(urlParams);
     if (!urlParams.has('access_token')) {
+        alert("Login failed.")
         location.assign("https://simonabrelat.github.io/replaylist")
     }
     const tok = urlParams.get('access_token');
