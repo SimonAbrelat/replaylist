@@ -11,7 +11,7 @@
       (() => {
         const tok1 = sessionStorage.getItem("tok");
         console.log(tok1)
-        let spotify = new Spotify(tok);
+        let spotify = new Spotify(tok1);
         spotify.getMe();
         console.log(spotify.getPlaylists());
       })()
