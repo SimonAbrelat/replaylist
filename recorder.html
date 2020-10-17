@@ -12,6 +12,7 @@
         const tok1 = sessionStorage.getItem("tok");
         console.log(tok1)
         let spotify = new Spotify(tok);
+        spotify.getMe();
         console.log(spotify.getPlaylists());
       })()
     </script>

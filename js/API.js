@@ -1,14 +1,10 @@
-const tok = sessionStorage.getItem("tok");
-const tok_type = sessionStorage.getItem("tok_type");
-const expires = sessionStorage.getItem("expires");
-console.log(tok)
-
-
-const Spotify = function(key) {
-    this.key = key;
-    this.user_id;
+class Spotify {
+    constructor(key) {
+        this.key = key;
+        this.user_id = null;
+    }
     
-    this.get = function(url) {
+    get(url) {
         return fetch(url, {
             method: 'GET',
             headers: {
@@ -19,23 +15,28 @@ const Spotify = function(key) {
         })
     }
 
-    this.get('https://api.spotify.com/v1/me').then(res => console.log(res));
+    getMe() {
+        this.get('https://api.spotify.com/v1/me')
+        .then(res => {
+            console.log(res)
+        });
+    }
     
-    this.getRecentlyPlayed = function() {
+    getRecentlyPlayed() {
         this.get('https://api.spotify.com/v1/me/player/recently-played')
         .then(res => {
             console.log(res);
         })
     }
 
-    this.getPlaylists = function() {
+    getPlaylists() {
         this.get('https://api.spotify.com/v1/users/' + user_id + '/playlists')
         .then(res => {
                 console.log(res);
         })
     }
 
-    this.createPlaylist = function(playlistName, isPublic, isCollaborative, description) {
+    createPlaylist(playlistName, isPublic, isCollaborative, description) {
         var parameters = new Object();
         parameters.name = playlistName;
         parameters.public = isPublic;
