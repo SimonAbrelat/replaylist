@@ -1,6 +1,5 @@
 const Spotify = function(key) {
     this.key = key;
-    this.client = new HttpClient();
     this.user_id;
     
     this.get = function(url) {
