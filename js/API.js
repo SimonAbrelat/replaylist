@@ -7,32 +7,33 @@ class Spotify {
     get(url) {
         return fetch(url, {
             method: 'GET',
+            mode: 'cors',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.key
             }
         })
+        .then(r => r.json())
     }
 
     getMe() {
-        this.get('https://api.spotify.com/v1/me')
-        .then(res => {
-            console.log(res)
-        });
+        res = this.get('https://api.spotify.com/v1/me');
+        res.then(r => this.user_id = r.id);
+        console.log(this.user_id);
     }
-    
+
     getRecentlyPlayed() {
-        this.get('https://api.spotify.com/v1/me/player/recently-played')
-        .then(res => {
-            console.log(res);
+        res = this.get('https://api.spotify.com/v1/me/player/recently-played')
+        .then(r => {
+            console.log(r);
         })
     }
 
     getPlaylists() {
         this.get('https://api.spotify.com/v1/users/' + this.user_id + '/playlists')
-        .then(res => {
-                console.log(res);
+        .then(r => {
+                console.log(r);
         })
     }
 

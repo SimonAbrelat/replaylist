@@ -19,6 +19,6 @@ function spotifyAuth () {
         + "&response_type=" + encodeURIComponent(response_type)
         + "&redirect_uri=" + encodeURIComponent(redirect_uri)
         + "&scope=" + encodeURIComponent(scope)
-        alert(str)
+        alert(str);
     location.assign(str);
 }
