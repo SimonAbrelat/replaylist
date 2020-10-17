@@ -1,16 +1,17 @@
-const HttpClient = function() {
+const HttpClient = function(contentType = null) {
     this.get = function(aUrl, key) {
         return new Promise((resolve, reject) => {
             var anHttpRequest = new XMLHttpRequest();
             anHttpRequest.open("GET", aUrl, true);
-            anHttpRequest.setRequestHeader("Authorization", key)
+            anHttpRequest.setRequestHeader("Authorization", key);
+            anHttpRequest.setRequestHeader("Content-Type", contentType);
             anHttpRequest.send(null);
             anHttpRequest.onload = () => {
-                resolve(anHttpRequest.response)
+                resolve(anHttpRequest.response);
             }
             anHttpRequest.onerror = () => {
-                reject(ananHttpRequest.response)
-                console.log("API call to Spotify failed")
+                reject(ananHttpRequest.response);
+                console.log("API call to Spotify failed");
             }
         });
     }
@@ -45,3 +46,5 @@ const Spotify = function(key) {
         var jsonParameters = JSON.stringify(parameters);
     }
 }
+
+var spotify = new Spotify(null);

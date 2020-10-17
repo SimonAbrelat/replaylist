@@ -9,6 +9,7 @@ var scopes = ["user-read-recently-played"
                 ,"playlist-modify-private"
             ];
 
+console.log(meme);
 function spotifyAuth () {
     let scope = "";
     scopes.forEach((s) => {

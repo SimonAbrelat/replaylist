@@ -8,6 +8,8 @@
     const tok = urlParams.get('access_token');
     const tok_type = urlParams.get('token_type');
     const expires = urlParams.get('expires_in');
-    console.log(tok);
+
+    spotify = new Spotify(tok);
+
     location.assign("https://simonabrelat.github.io/replaylist/recorder.html")
 })()
