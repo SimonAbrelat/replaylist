@@ -9,6 +9,8 @@
     <script src='./js/app.js'></script>
     <script>
       (() => {
+        const tok1 = sessionStorage.getItem("tok");
+        console.log(tok1)
         let spotify = new Spotify(tok);
         console.log(spotify.getPlaylists());
       })()

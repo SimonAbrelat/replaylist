@@ -1,6 +1,8 @@
 const tok = sessionStorage.getItem("tok");
 const tok_type = sessionStorage.getItem("tok_type");
 const expires = sessionStorage.getItem("expires");
+console.log(tok)
+
 
 const Spotify = function(key) {
     this.key = key;
