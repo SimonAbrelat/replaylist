@@ -1,0 +1,41 @@
+/* https://colorpalettes.net/color-palette-1834/
+ * #050308
+ * #221336
+ * #ba5e8c
+ * #e89173
+ * #ffead6
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    --black: #050308;
+    --navy: #221336;
+    --rose: #ba5e8c;
+    --orange: #e89173;
+    --cream: #ffead6;
+}
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--rose);
+}
+
+/* Style the header */
+h2 {
+    background-color: var(--navy);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: var(--rose);
+}
+
+/* Style the footer */
+footer {
+    background-color: var(--black);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
