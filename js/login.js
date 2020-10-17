@@ -1,6 +1,6 @@
-import app_info from "../secrets/app.json"
+//const app_info = require("../secrets/app.json");
 
-var client_id = app_info.id;
+var client_id = "aaf992b285344c0a827bac7f722b8df4";
 var response_type = "token";
 var redirect_uri =  "https://simonabrelat.github.io/replaylist/redirect.html";
 var scopes = ["user-read-recently-played"
@@ -10,11 +10,15 @@ var scopes = ["user-read-recently-played"
             ];
 
 function spotifyAuth () {
-    str = "https://accounts.spotify.com/authorize?client_id=" + client_id 
-        + "&responce_type=" + encodeURIComponent(response_type)
+    let scope = "";
+    scopes.forEach((s) => {
+        scope += ((scope.length != 0) ? "%20" : "") + s;
+    })
+    str = "https://accounts.spotify.com/authorize"
+        + "?client_id=" + encodeURIComponent(client_id) 
+        + "&response_type=" + encodeURIComponent(response_type)
         + "&redirect_uri=" + encodeURIComponent(redirect_uri)
-        + "&scope" + scopes.reduce((x, acc) => {
-            acc += ((acc.length != 0) ? "%20" : "") + x;
-        }, "");
+        + "&scope=" + encodeURIComponent(scope)
+        alert(str)
     location.assign(str);
 }
