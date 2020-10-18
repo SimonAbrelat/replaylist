@@ -71,6 +71,7 @@ function addToPL(s, play, arr) {
 }
 
 async function updatePL(s, play, curr) {
+    let ret = [];
     const songs = await s.getSongsInPlaylist(play);
     for (let c in curr) {
         let dup = false;
@@ -86,7 +87,7 @@ async function updatePL(s, play, curr) {
             ret.push(track.uri);
         }
     }
-    addToPL(play, ret, s);
+    addToPL(s, play, ret);
 }
 
 function addNewPL(allPLs, s) {

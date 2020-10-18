@@ -1,4 +1,4 @@
-<img src="./res/logo.png" alt="Compress-Hension" width="200">
+<img src="./res/logo.png" alt="replaylist logo" width="200">
 # replaylist
 
 ## Inspiration
