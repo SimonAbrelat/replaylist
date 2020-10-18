@@ -74,7 +74,7 @@ class Spotify {
         var url = "https://api.spotify.com/v1/playlists/" + newPL.id
         fetch(url, {
             method: "POST",
-            //mode: "cors",
+            mode: "cors",
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + this.key
@@ -83,6 +83,8 @@ class Spotify {
                 'description': newDesc
             }
         })
+        console.log("change successful")
+    }
             
         /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
@@ -104,7 +106,6 @@ class Spotify {
             }
         })
         */
-    }
 /*
     createPlaylist(playlistName, isPublic, isCollaborative, description) {
         var parameters = new Object();
