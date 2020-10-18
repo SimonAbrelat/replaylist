@@ -26,6 +26,10 @@ function setPlaylists(arr) {
         opt.text = arr[index].name;
         options.appendChild(opt);
     };
+    let addOpt = document.createElement("option");
+    addOpt.text = "+ add playlist";
+    addOpt.style.backgroundColor = "#e89173"
+    options.appendChild(addOpt)
 }
 
 function setHistory(arr) {
