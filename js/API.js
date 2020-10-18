@@ -18,6 +18,7 @@ class Spotify {
     }
 
     getMe() {
+        console.log(this.key)
         this.get('https://api.spotify.com/v1/me')
         .then(r => this.user_id = r.id)
     }

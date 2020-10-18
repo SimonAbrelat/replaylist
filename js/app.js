@@ -2,7 +2,9 @@ const s = new Spotify(sessionStorage.getItem("tok"));
 var activePL = null;
 
 (async () => {
-await s.getMe()
+    while(s.user_id == null) {
+        await s.getMe()
+    }
 }) ()
 
 async function getRePlaylists() {
