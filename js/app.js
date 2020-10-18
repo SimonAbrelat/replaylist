@@ -68,7 +68,33 @@ function addToPL(play, arr, s) {
 }
 
 function updatePL(s, play, curr) {
-    const newest_add = s.getSongsInPlaylist(play)
+    let big = 0;
+    let ret = [];
+    const songs = s.getSongsInPlaylist(play);
+    for (let x in songs) {
+        let comp = Date.parse(songs[x].added_at).getTime();
+        if (comp > big) {
+            big = comp;
+        }
+    }
+    for (let c in curr) {
+        let track = curr[c];
+        if (Date.parse(track.added_at).getTime() < big) {
+            continue;
+        }
+        let dup = false;
+        for (let x in songs) {
+            let comp = songs[x].id
+            if (track.id === comp) {
+                dup = true;
+                break;
+            }
+        }
+        if (dup) {
+            continue;
+        }
+        ret.push(track.uri);
+    }
     //.filter((r, big) => {
     //    r.
     //}, 0);
