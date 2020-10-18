@@ -172,3 +172,18 @@ select option:checked:after {
 }
 
 /* Modify link appearance */
+a:link {
+    color: var(--orange);
+}
+  
+a:visited {
+    color: var(--rose);
+}
+
+a:hover {
+    color: var(--rose);
+}
+
+a:active {
+    color: var(--orange);
+}
