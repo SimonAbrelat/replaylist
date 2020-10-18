@@ -1,10 +1,8 @@
 var s = null;
 var activePL = null;
 
-function getRePlaylists(s) {
-    let totalList = (async () => {
-        return await s.getPlaylists()
-    })();
+async function getRePlaylists(s) {
+    let totalList = await s.getPlaylists()
     let ourList = [];
     for (let i = 0; i < totalList.length; i++) {
         tags = totalList[i].description.split("#",2)
