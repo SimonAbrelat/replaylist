@@ -1,12 +1,6 @@
 var s = null;
 var activePL = null;
 
-(async () => {
-    let tok = sessionStorage.getItem("tok");
-    let id = await getId(tok);
-    s = new Spotify(tok, id);
-}) ()
-
 async function getRePlaylists() {
     let totalList = await s.getPlaylists();
     let ourList = [];
@@ -20,6 +14,7 @@ async function getRePlaylists() {
 }
 
 function setPlaylists(playlists) {
+    playlists = await getRePlaylists()
     let options = document.getElementById("playlists");
     for (x in playlists) {
         let opt = document.createElement("option");
