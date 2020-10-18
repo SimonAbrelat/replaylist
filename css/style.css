@@ -161,7 +161,7 @@ li:hover {
     text-align: center;
 }
 
-/* SELECT OPTIONS
+/* SELECT OPTIONS */
 select {
     outline: none;
 }
@@ -180,5 +180,3 @@ select option:hover {
 select option:checked:after {
     background-color: var(--orange);
 }
-
-*/
