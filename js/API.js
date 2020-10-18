@@ -48,7 +48,7 @@ class Spotify {
         var encList = []
         let uri = null;
         console.log(uriList)
-        for (uri in uriList[0]) {
+        for (uri in uriList) {
             encList.push(encodeURIComponent(uri));
         }
         console.log(encList);

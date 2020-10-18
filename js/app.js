@@ -43,7 +43,7 @@ Spotify:track:6S1IgeHxxOT9qVWnmsdGxe
 3js3WNo60W35RQgBJDTj
 */
 function addToPL() {
-    out = [];31
+    out = [];
     out.push("Spotify:track:6S1IgeHxxOT9qVWnmsdGxe")
     s.addToPlayList("", out);
 }
