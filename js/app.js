@@ -91,29 +91,20 @@ async function updatePL(s, play, curr) {
 }
 
 function addNewPL(allPLs, s) {
-    var target = window.prompt("Add replaylist tag to existing Playlist:", "Playlist Name").trim();
-    for (idx in allPLs) {
-        console.log(allPLs[idx])
-        if (allPLs[idx].name.trim() == target) {
-            console.log("match found")
-            s.addTag(allPLs[idx])
-            location.replace("https://replaylists.netlify.app/recorder.html")
-            return
-        }
-    } 
+    if (document.getElementById("playlists").value == "+ add playlist"){
+        var target = window.prompt("Add replaylist tag to existing Playlist:", "Playlist Name").trim();
+        for (idx in allPLs) {
+            if (allPLs[idx].name.trim() == target) {
+                console.log("match found")
+                s.addTag(allPLs[idx])
+                location.replace("https://replaylists.netlify.app/recorder.html")
+                return
+            }
+        } 
+    }
 }
 
 function logOut() {
     sessionStorage.clear()
     window.location.replace("https://replaylists.netlify.app/")
 }
-/*
-function createHistoryPL() {
-    playlistID = s.createPlaylist("replaylist", false, false, "#replaylist#");
-    hist = s.getRecentlyPlayed();
-    addList = []
-    for (track in hist) {
-        addList.push(track.track.uri);
-    }
-    s.addToPlayList(list, addList)
-} */

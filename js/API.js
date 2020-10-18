@@ -12,7 +12,6 @@ function get(url, key) {
 }
 
 function getId(key) {
-    console.log(key)
     return this.get('https://api.spotify.com/v1/me', key).then(r => r.id);
 }
 
@@ -57,7 +56,6 @@ class Spotify {
             }
             url += encodeURIComponent(uriList[uri]);
         }
-        console.log(url);
         fetch(url, {
             method: "POST",
             mode: "cors",
@@ -83,7 +81,6 @@ class Spotify {
                 'description': newDesc
             })
         })
-        console.log("change successful")
     }
             
         /*
@@ -106,24 +103,4 @@ class Spotify {
             }
         })
         */
-/*
-    createPlaylist(playlistName, isPublic, isCollaborative, description) {
-        var parameters = new Object();
-        parameters.name = playlistName;
-        parameters.public = isPublic;
-        parameters.collaborative = isCollaborative;
-        parameters.description = description;
-        var jsonParameters = JSON.stringify(parameters);
-        var url = "https://api.spotify.com/v1/users/" + this.user_id + "/playlists"
-        fetch(url, {
-            method: "POST",
-            mode: "cors",
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + this.key
-            },
-            body: jsonParameters
-        })
-    }
-    */
 }
