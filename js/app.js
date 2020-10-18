@@ -98,6 +98,7 @@ function addNewPL(allPLs, s) {
         if (allPLs[idx].name.trim() == target) {
             console.log("match found")
             s.addTag(allPLs[idx])
+            location.replace("https://replaylists.netlify.app/recorder.html")
             return
         }
     } 
