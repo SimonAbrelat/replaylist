@@ -63,7 +63,7 @@ class Spotify {
             }
         })
         */
-        var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks?uris=";
+        var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         let uri = null;
         let encList = []
         for (uri in uriList) {
