@@ -2,6 +2,9 @@
 
 # replaylist
 
+Use replaylist [here][2]!
+
+[2]:https://replaylists.netlify.app/
 ## Inspiration
 
 Have you ever listened to an amazing radio station or queue on Spotify and wish you could have saved those songs? Was the process of rewinding song by song tedious and cumbersome? Do you wish you could add multiple songs to playlists at once? Don't you wish there was an easier way to access your listening history?  We know we have, and that's what inspired us to build replaylist.
