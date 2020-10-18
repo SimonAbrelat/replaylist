@@ -49,7 +49,7 @@ class Spotify {
             method: "POST",
             mode: "cors",
             headers: {
-                'Content-Type': 'application/json',
+                'Accept': 'application/json',
                 'Authorization': 'Bearer ' + this.key
             },
             body: {
