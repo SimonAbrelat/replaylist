@@ -66,6 +66,11 @@ function addToPL(play, arr, s) {
         s.addToPlayList(play, out);
     }
 }
+
+function logOut() {
+    sessionStorage.clear()
+    window.location.replace("https://replaylists.netlify.app/")
+}
 /*
 function createHistoryPL() {
     playlistID = s.createPlaylist("replaylist", false, false, "#replaylist#");

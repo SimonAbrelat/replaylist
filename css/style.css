@@ -41,6 +41,7 @@
         "footer footer footer footer";
     */
 
+    /*
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
     grid-template-areas:
@@ -49,6 +50,16 @@
         ". dropdown . . ."
         ". history history history ."
         "footer footer footer footer";
+    */
+
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-areas:
+        "logo header header header logout"
+        ". dropdown push ui ui"
+        ". history history history ."
+        "footer footer footer footer";
+
     justify-items: center;
     align-items: center;
     justify-content: stretch;
@@ -82,8 +93,16 @@ h1 {
 
 .dropdown {
     grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-row: 2;
     justify-self: start;
+}
+
+.playlists {
+    display: none;
+}
+
+.playlists:hover {
+    display: block;
 }
 
 .push {
@@ -100,14 +119,14 @@ h1 {
 
 .history {
     grid-column: 2 / span 3;
-    grid-row: 4;
+    grid-row: 3;
     justify-self: start;
     align-self: start;
 }
 
 .footer {
     grid-column: 1 / span 5;
-    grid-row: 5;
+    grid-row: 4;
     align-self: start;
 }
 
