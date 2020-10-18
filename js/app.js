@@ -61,6 +61,7 @@ function addToPL(play, arr, s) {
                 out = [];
             }, 100)
         }
+        counter++;
     }
     if (out.length != 0) {
         s.addToPlaylist(play, out)
