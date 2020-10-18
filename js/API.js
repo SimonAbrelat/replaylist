@@ -79,9 +79,9 @@ class Spotify {
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + this.key
             },
-            body: {
+            body: JSON.stringify({
                 'description': newDesc
-            }
+            })
         })
         console.log("change successful")
     }
