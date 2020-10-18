@@ -82,6 +82,24 @@ class Spotify {
             })
         })
     }
+
+    createNewPL(name) {
+        var url = "https://api.spotify.com/v1/users/" + this.user_id + " /playlists";
+
+        fetch(url, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + this.key
+            },
+            body: JSON.stringify({
+                'name': name,
+                'public': false,
+                'description': newDesc
+            })
+        })
+    }
             
         /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";

@@ -100,7 +100,8 @@ function addNewPL(allPLs, s) {
                 location.replace("https://replaylists.netlify.app/recorder.html")
                 return
             }
-        } 
+        }
+        s.createNewPL(target) 
     }
 }
 
