@@ -67,6 +67,10 @@ function addToPL(play, arr, s) {
     }
 }
 
+function updatePL(){
+    
+}
+
 function logOut() {
     sessionStorage.clear()
     window.location.replace("https://replaylists.netlify.app/")

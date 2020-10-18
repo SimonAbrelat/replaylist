@@ -1,7 +1,7 @@
 # replaylist
 
 ## usage
-Log into Spotify account to access replaylist. The web app displays the most recent 50 songs in listening history and allows users to
+Log into Spotify account to access replaylist. The web app displays the most recent 50 songs in listening history. Users can select desired history sections and add them to user-defined playlists.
 
 ## Spotify API
 
