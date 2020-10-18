@@ -58,9 +58,9 @@ function addToPL(play, arr, s) {
         out.push(arr[counter])
         if (out.length == 5) {
             await setTimeout(() => {
+                s.addToPlaylist(play, out);
+                out = [];
             }, 100)
-            s.addToPlaylist(play, out);
-            out = [];
         }
         counter++;
     }/*
