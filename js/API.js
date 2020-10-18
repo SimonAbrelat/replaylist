@@ -96,7 +96,7 @@ class Spotify {
             body: JSON.stringify({
                 'name': name,
                 'public': false,
-                'description': newDesc
+                'description': "replaylist#"
             })
         })
     }
