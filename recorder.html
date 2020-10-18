@@ -34,56 +34,31 @@
             <div class="logout">
                 <button class="btn" onclick="logOut()">log out</button>
             </div>
+
             <div class="dropdown">
                 <div>choose your playlist</div>
-                <!--
-                <div id='dropdown_dest'>rock for chands</div>
-                <ul id="playlists" on>
-                    <li id="pl_0">rock for chads</li>
-                    <li id="pl_1">bops</li>
-                    <li id="pl_2">2cool4school</li>
-                </ul>
-                -->
-
+                <p></p>
                 <select name="playlists" id="playlists">
                   <!--
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="opel">Opel</option>
-                  <option value="audi">Audi</option>
+                    <option></option>
+                    <option>rock for chads</option>
+                    <option>bops</option>
+                    <option>2cool4school</option>
+                    <option>sad songs</option>
                   -->
+                  <option style="background-color:#e89173" onclick="">+ add playlist</option>
                 </select>
             </div>
-            <div class="push">
-                <button class="btn" onclick="addToPL(getPLID(playlist), curr_history[0].map(r => r.track.uri), s)">push</button>
-            </div>
+
             <div class="ui">
-                <button class="btn">record</button>
-                <button class="btn">pause</button>
-                <button class="btn">add playlist</button>
+                <button class="btn" style="margin:0.5em">push</button>
+                <button class="btn" style="margin:0.5em">record</button>
+                <button class="btn" style="margin:0.5em">pause</button>
             </div>
 
             <div class="history">
                 <div>history</div>
-                <!--ul id="historys">
-                    <li id="hs_0">song 0 artist album length</li>
-                    <li id="hs_1">song 1 artist album length</li>
-                    <li id="hs_2">song 2 artist album length</li>
-                    <li id="hs_0">song 0 artist album length</li>
-                    <li id="hs_1">song 1 artist album length</li>
-                    <li id="hs_2">song 2 artist album length</li>
-                    <li id="hs_0">song 0 artist album length</li>
-                    <li id="hs_1">song 1 artist album length</li>
-                    <li id="hs_2">song 2 artist album length</li>
-                    <li id="hs_0">song 0 artist album length</li>
-                    <li id="hs_1">song 1 artist album length</li>
-                    <li id="hs_2">song 2 artist album length</li>
-                    <li id="hs_0">song 0 artist album length</li>
-                    <li id="hs_1">song 1 artist album length</li>
-                    <li id="hs_2">song 2 artist album length</li>
-                </ul-->
-              
-                
+                <p></p>                
                 <select size="6" id="historys">
                   <!--option>Option 1</option>
                   <option>Option 2</option>
