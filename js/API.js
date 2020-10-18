@@ -1,30 +1,37 @@
+function get(url, key) {
+    return fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + key
+        }
+    })
+    .then(r => r.json())
+}
+
+function getId(key) {
+    console.log(key)
+    return this.get('https://api.spotify.com/v1/me', key).then(r => r.id);
+}
+
 class Spotify {
-    constructor(key) {
+    constructor(key, id) {
         this.key = key;
-        this.user_id = null;
-    }
-    
-    get(url) {
-        return fetch(url, {
-            method: 'GET',
-            mode: 'cors',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + this.key
-            }
-        })
-        .then(r => r.json())
+        this.user_id = id;
     }
 
+    get(url) {
+        return get(url, this.key)
+    }
+    
     getMe() {
-        console.log(this.key)
-        this.get('https://api.spotify.com/v1/me')
-        .then(r => this.user_id = r.id)
+        return this.get('https://api.spotify.com/v1/me');
     }
 
     getRecentlyPlayed() {
-        this.get('https://api.spotify.com/v1/me/player/recently-played')
+        return this.get('https://api.spotify.com/v1/me/player/recently-played')
         .then(function(result) {
             return result.items;
         })
