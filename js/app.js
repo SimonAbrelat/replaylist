@@ -58,8 +58,10 @@ function addToPL(play, arr, s) {
         out.push(arr[counter])
         console.log(arr[counter]);
         if ((counter + 1) % 5 == 0) {
-            s.addToPlaylist(play, out);
-            out = [];
+            setTimeout(() => {
+                s.addToPlaylist(play, out);
+                out = [];
+            }, 100)
         }
         counter++;
     }
