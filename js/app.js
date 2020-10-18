@@ -2,8 +2,8 @@ var s = null;
 var activePL = null;
 
 (async () => {
-    let id = await getId();
     let tok = sessionStorage.getItem("tok");
+    let id = await getId(tok);
     s = new Spotify(id, tok);
 }) ()
 
