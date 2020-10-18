@@ -84,7 +84,7 @@ class Spotify {
     }
 
     createNewPL(name) {
-        var url = "https://api.spotify.com/v1/users/" + this.user_id + " /playlists";
+        var url = "https://api.spotify.com/v1/users/" + this.user_id + "/playlists";
 
         fetch(url, {
             method: "POST",
