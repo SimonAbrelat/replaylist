@@ -51,13 +51,13 @@ function getPLID(arr) {
     }
 }
 
-function addToPL(play, arr, ) {
+function addToPL(play, arr, s) {
     let counter = 0;
     let out = []
     while (counter < arr.length) {
         out.push(arr[counter])
         if ((counter + 1) % 5 == 0) {
-            s.addToPlayList("", out);
+            s.addToPlaylist("", out);
             out = [];
         }
         counter++;
