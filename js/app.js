@@ -42,10 +42,29 @@ function setHistory(arr) {
 Spotify:track:6S1IgeHxxOT9qVWnmsdGxe
 3js3WNo60W35RQgBJDTj
 */
-function addToPL() {
-    out = [];
-    out.push("Spotify:track:6S1IgeHxxOT9qVWnmsdGxe")
-    s.addToPlayList("", out);
+function getPLID(arr) {
+    let target = document.getElementById("playlists").value
+    for (idx in array) {
+        if (arr[idx].name == target) {
+            return arr[idx].uri
+        }
+    }
+}
+
+function addToPL(play, arr, ) {
+    let counter = 0;
+    let out = []
+    while (counter < arr.length) {
+        out.push(arr[counter])
+        if ((counter + 1) % 5 == 0) {
+            s.addToPlayList("", out);
+            out = [];
+        }
+        counter++;
+    }
+    if (counter % 5 != 0) {
+        s.addToPlayList("", out);
+    }
 }
 /*
 function createHistoryPL() {

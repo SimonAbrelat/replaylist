@@ -44,7 +44,6 @@ class Spotify {
 
  
     addToPlaylist(playlistID, uriList) {
-        /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks?uris=";
         let uri = null;
         for (uri in uriList) {
@@ -62,7 +61,7 @@ class Spotify {
                 'Authorization': 'Bearer ' + this.key
             }
         })
-        */
+        /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         let uri = null;
         let encList = []
@@ -81,6 +80,7 @@ class Spotify {
                 "uris" : encList
             }
         })
+        */
     }
 /*
     createPlaylist(playlistName, isPublic, isCollaborative, description) {

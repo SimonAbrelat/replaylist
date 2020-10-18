@@ -17,10 +17,10 @@
             let id = await getId(tok);
             s = new Spotify(tok, id);
 
-            let plays = await getRePlaylists(s);
-            let hist = await getHistory(s);
-            playlist = setPlaylists(plays);
-            history = setHistory(hist);
+            playlist = await getRePlaylists(s);
+            history = await getHistory(s);
+            setPlaylists(playlist);
+            setHistory(history);
         })();
         </script>
     </head>
@@ -34,15 +34,14 @@
             </div>
             <div class="dropdown">
                 <div>choose your playlist</div>
-                <select name="playlists" id="playlists">
-                    <!--
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                    -->
-                  </select>
-                <button class="btn">push</button>
+                <ul id="playlists">
+                    <li id="pl_0">rock for chads</li>
+                    <li id="pl_1">bops</li>
+                    <li id="pl_2">2cool4school</li>
+                </ul>
+            </div>
+            <div class="push">
+                <button class="btn" onclick="addToPL(getPLID(playlist), history[0].map(r => r.track.uri))">push</button>
             </div>
             <div class="ui">
                 <button class="btn">record</button>
@@ -52,19 +51,11 @@
 
             <div class="history">
                 <div>history</div>
-                <div>
-                    <select size="6" id="historys">
-                        <!--
-                        <option value="a1">Option 1</option>
-                        <option value="a2">Option 2</option>
-                        <option value="a3">Option 3</option>
-                        <option>Option 3 asdfasdf</option>
-                        <option>Option 3 asdf</option>
-                        <option>Option 3 294873</option>
-                        <option>Option 3 306857649567</option>
-                        -->
-                    </select>
-                </div>
+                <ul id="historys">
+                    <li id="hs_0">song 0 artist album length</li>
+                    <li id="hs_1">song 1 artist album length</li>
+                    <li id="hs_2">song 2 artist album length</li>
+                </ul>
             </div>
             <div class="footer">
                 github.com reeeeeeeeee
