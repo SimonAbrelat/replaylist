@@ -78,6 +78,7 @@ async function updatePL(s, play, curr) {
         for (let x in songs) {
             let h = curr[c];
             let p = songs[x];
+            console.log(h);
             if (h.id === p.id) {
                 dup = true;
                 break;
