@@ -84,7 +84,10 @@ function updatePL(s, play, curr) {
         let track = curr[c];
         if (Date.parse(track.added_at) < big) {
             continue;
+        } else {
+            console.log(track);
         }
+        /*
         let dup = false;
         for (let x in songs) {
             let comp = songs[x].id
@@ -96,13 +99,14 @@ function updatePL(s, play, curr) {
         if (dup) {
             continue;
         }
+        */
         ret.push(track.uri);
     }
     addToPL(play, ret, s);
 }
 
 function addNewPL(allPLs, newName) {
-    
+    for 
 }
 
 function logOut() {
