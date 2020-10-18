@@ -45,7 +45,7 @@ Spotify:track:6S1IgeHxxOT9qVWnmsdGxe
 function getPLID(arr) {
     let target = document.getElementById("playlists").value
     for (idx in arr) {
-        if (arr[idx].name == target) {
+        if (arr[idx].name.trim() == target.trim()) {
             return arr[idx].id;
         }
     }
@@ -84,8 +84,7 @@ async function updatePL(s, play, curr) {
             }
         }
         if (!dup){
-            console.log(curr[c]);
-            ret.push(curr[c].uri);
+            ret.push(curr[c].track.uri);
         }
     }
     addToPL(s, play, ret);
