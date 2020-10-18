@@ -50,6 +50,7 @@ class Spotify {
         for (uri in uriList) {
             encList.push(encodeURIComponent(uri));
         }
+        console.log(encList);
         fetch(url, {
             method: "POST",
             mode: "cors",
