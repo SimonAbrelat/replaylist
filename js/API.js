@@ -25,14 +25,14 @@ class Spotify {
     getRecentlyPlayed() {
         this.get('https://api.spotify.com/v1/me/player/recently-played')
         .then(function(result) {
-            return r.items;
+            return result.items;
         })
     }
 
     getPlaylists() {
         this.get('https://api.spotify.com/v1/users/' + this.user_id + '/playlists')
         .then(function(result) {
-            return r.items;
+            return result.items;
         })
     }
 /*

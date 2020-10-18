@@ -8,7 +8,7 @@ s.getMe()
 function getRePlaylists() {
     let totalList = s.getPlaylists();
     let ourList = [];
-    for (let i = 0; i < pList.length; i++) {
+    for (let i = 0; i < totalList.length; i++) {
         tags = totalList[i].description.split("#",2)
         if (tags[0] == "replaylist") {
             ourList.push(totalList[i])
