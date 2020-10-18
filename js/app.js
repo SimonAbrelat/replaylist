@@ -46,7 +46,7 @@ function getPLID(arr) {
     let target = document.getElementById("playlists").value
     for (idx in arr) {
         if (arr[idx].name == target) {
-            return arr[idx].id
+            return arr[idx].id)
         }
     }
 }
@@ -57,13 +57,13 @@ function addToPL(play, arr, s) {
     while (counter < arr.length) {
         out.push(arr[counter])
         if ((counter + 1) % 5 == 0) {
-            s.addToPlaylist("", out);
+            s.addToPlaylist(play, out);
             out = [];
         }
         counter++;
     }
     if (counter % 5 != 0) {
-        s.addToPlayList("", out);
+        s.addToPlayList(play, out);
     }
 }
 /*
