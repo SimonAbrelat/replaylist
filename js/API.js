@@ -18,13 +18,12 @@ class Spotify {
     }
 
     getMe() {
-        res = this.get('https://api.spotify.com/v1/me');
-        res.then(r => this.user_id = r.id);
+        this.get('https://api.spotify.com/v1/me').then(r => this.user_id = r.id);
         console.log(this.user_id);
     }
 
     getRecentlyPlayed() {
-        res = this.get('https://api.spotify.com/v1/me/player/recently-played')
+        this.get('https://api.spotify.com/v1/me/player/recently-played')
         .then(r => {
             console.log(r);
         })
