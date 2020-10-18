@@ -57,16 +57,17 @@ function addToPL(play, arr, s) {
     while (counter < arr.length) {
         out.push(arr[counter])
         if (out.length == 5) {
-            setTimeout(() => {
-                s.addToPlaylist(play, out);
-                out = [];
+            await setTimeout(() => {
             }, 100)
+            s.addToPlaylist(play, out);
+            out = [];
         }
         counter++;
-    }
+    }/*
     if (out.length != 0) {
         s.addToPlaylist(play, out)
     }
+    */
 }
 
 function updatePL(s, play, curr) {
