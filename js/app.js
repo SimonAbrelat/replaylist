@@ -70,7 +70,7 @@ function addToPL(s, play, arr) {
     */
 }
 
-function updatePL(s, play, curr) {
+async function updatePL(s, play, curr) {
     const songs = await s.getSongsInPlaylist(play);
     for (let c in curr) {
         for (let x in songs) {
@@ -83,7 +83,7 @@ function updatePL(s, play, curr) {
     addToPL(play, ret, s);
 }
 
-function addNewPL(allPLs, newName, s) {
+function addNewPL(allPLs, s) {
     var target = window.prompt("Add replaylist tag to existing Playlist:", "Playlist Name");
     for (idx in allPLs) {
         if (allPLs[idx].name == target) {
