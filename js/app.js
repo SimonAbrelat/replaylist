@@ -65,22 +65,6 @@ function addToPL(play, arr, s) {
     if (out.length != 0) {
         s.addToPlaylist(play, out)
     }
-    /*
-    while (counter < arr.length) {
-        out.push(arr[counter])
-        console.log(arr[counter]);
-        if ((counter + 1) % 5 == 0) {
-            setTimeout(() => {
-                s.addToPlaylist(play, out);
-                out = [];
-            }, 100)
-        }
-        counter++;
-    }
-    if (counter % 5 != 0) {
-        s.addToPlayList(play, out);
-    }
-    */
 }
 
 function updatePL(s, play, curr) {
