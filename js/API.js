@@ -44,6 +44,9 @@ class Spotify {
 
  
     addToPlaylist(playlistID, uriList) {
+        var parameters = new Object();
+        parameters.uriList = uriList;
+        var jsonParameters = JSON.stringify(parameters)
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         fetch(url, {
             method: "POST",
@@ -52,7 +55,7 @@ class Spotify {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.key
             },
-            body: uriList
+            body: jsonParameters
         })
     }
 /*
