@@ -2,7 +2,6 @@ class Spotify {
     constructor(key) {
         this.key = key;
         this.user_id = null;
-        getMe();
     }
     
     get(url) {

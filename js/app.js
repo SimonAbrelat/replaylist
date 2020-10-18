@@ -1,6 +1,9 @@
 const s = new Spotify(sessionStorage.getItem("tok"));
 var activePL = null;
 
+(() => {
+s.getMe()
+}) ()
 
 function getRePlaylists() {
     let totalList = s.getPlaylists();
