@@ -72,17 +72,19 @@ function addToPL(s, play, arr) {
 
 function updatePL(s, play, curr) {
     let big = 0;
+    let index = 0;
     let ret = [];
     const songs = s.getSongsInPlaylist(play);
     for (let x in songs) {
         let comp = Date.parse(songs[x].added_at);
-        if (comp > big) {
+        if (comp >= big) {
             big = comp;
+            index = x;
         }
     }
     for (let c in curr) {
         let track = curr[c];
-        if (Date.parse(track.added_at) < big) {
+        if (Date.parse(track.added_at) <= big) {
             continue;
         } else {
             console.log(track);

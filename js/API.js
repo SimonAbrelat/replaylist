@@ -67,16 +67,20 @@ class Spotify {
             }
         })
 
-        function addTag(plID) {
+        function addTag(playlist) {
         var url = "https://api.spotify.com/v1/playlists/" + playlistID
         fetch(url, {
-            method: "POST",
-            mode: "cors",
+            method: "PUT",
+            //mode: "cors",
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + this.key
             }
+            body: {
+                'description': newDesc
+            }
         })
+        
         }
         /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
