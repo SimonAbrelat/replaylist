@@ -44,6 +44,7 @@ class Spotify {
 
  
     addToPlaylist(playlistID, uriList) {
+        /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks?uris=";
         let uri = null;
         for (uri in uriList) {
@@ -59,6 +60,25 @@ class Spotify {
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + this.key
+            }
+        })
+        */
+        var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks?uris=";
+        let uri = null;
+        let encList = []
+        for (uri in uriList) {
+            encList.push(encodeURIComponent(uriList[uri]));
+        }
+        console.log(url);
+        fetch(url, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + this.key
+            },
+            body: {
+                "uris" : encList
             }
         })
     }
