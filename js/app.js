@@ -71,46 +71,24 @@ function addToPL(s, play, arr) {
 }
 
 function updatePL(s, play, curr) {
-    let big = 0;
-    let index = 0;
-    let ret = [];
-    const songs = s.getSongsInPlaylist(play);
-    for (let x in songs) {
-        let comp = Date.parse(songs[x].added_at);
-        if (comp >= big) {
-            big = comp;
-            index = x;
-        }
-    }
+    const songs = await s.getSongsInPlaylist(play);
     for (let c in curr) {
-        let track = curr[c];
-        if (Date.parse(track.added_at) <= big) {
-            continue;
-        } else {
-            console.log(track);
-        }
-        /*
-        let dup = false;
         for (let x in songs) {
-            let comp = songs[x].id
-            if (track.id === comp) {
-                dup = true;
-                break;
-            }
+            console.log(c)
+            console.log(x)
         }
-        if (dup) {
-            continue;
-        }
-        */
+        
         ret.push(track.uri);
     }
     addToPL(play, ret, s);
 }
 
 function addNewPL(allPLs, newName, s) {
+    var target = window.prompt("Add replaylist tag to existing Playlist:", "Playlist Name");
     for (idx in allPLs) {
         if (allPLs[idx].name == target) {
-            s.addTag(allPLs[idx].id)
+            s.addTag(allPLs[idx])
+            return
         }
     } 
 }

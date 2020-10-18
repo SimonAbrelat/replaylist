@@ -67,15 +67,16 @@ class Spotify {
             }
         })
 
-        function addTag(playlist) {
-        var url = "https://api.spotify.com/v1/playlists/" + playlistID
+        function addTag(newPL) {
+        var newDesc = "replaylist# " + newPL.description
+        var url = "https://api.spotify.com/v1/playlists/" + newPL.id
         fetch(url, {
             method: "PUT",
             //mode: "cors",
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + this.key
-            }
+            },
             body: {
                 'description': newDesc
             }
