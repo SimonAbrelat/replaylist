@@ -1,25 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>replaylist | recorder</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src='./js/API.js'></script>
-    <script src='./js/app.js'></script>
-    <script>
-      (() => {
-        const tok1 = sessionStorage.getItem("tok");
-        console.log(tok1)
-        let spotify = new Spotify(tok1);
-        spotify.getMe();
-      })()
-    </script>
-  </head>
+    <head>
+        <title>replaylist | recorder</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/login.js"></script>
+        <script>
+        (() => {
+            console.log("Version 0.10");
+        })();
+        </script>
+    </head>
 
-  <body>
-    <header><h2>replaylist</h2></header>
+    <body>
+        <div class="container">
+            <div class="logo"><img src="replay.png" style="width:50%; height:auto;" alt="replaylist logo"></div>
+            <div class="header">replaylist</div>
+            <div class="logout">
+                <button class="btn">log out</button>
+            </div>
+            <div class="dropdown">
+                <div>choose your playlist</div>
+                <input list="playlists" name="playlist">
+                <datalist id="playlists">
+                  <!--
+                    <option value="rock">
+                    <option value="bops">
+                    <option value="sads">
+                    <option value="edgy">
+                  -->
+                </datalist>
+            </div>
+            <div class="ui">
+                <button class="btn">record</button>
+                <button class="btn">pause</button>
+                <button class="btn">add playlist</button>
+            </div>
 
-    <footer><p>reeeeee</p></footer>
-  </body>
+            <div class="history">
+                <div>history</div>
+                <div>
+                    <input list="historys" name="element">
+                    <datalist id="historys">
+                        <option value="song 1">
+                        <option value="song 2">
+                        <option value="song 3">
+                        <option value="song 4">
+                        <option value="song 5">
+                    </datalist>
+                </div>
+            </div>
+            <div class="footer">
+                github.com reeeeeeeeee
+            </div>
+        </div>
+    </body>
+    
 </html>
+

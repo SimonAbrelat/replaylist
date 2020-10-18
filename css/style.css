@@ -6,8 +6,10 @@
  * #ffead6
 */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*/
 
 * {
     box-sizing: border-box;
@@ -17,25 +19,84 @@
     --orange: #e89173;
     --cream: #ffead6;
 }
-  
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--rose);
-}
 
-/* Style the header */
-h2 {
+:root {
     background-color: var(--navy);
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: var(--rose);
+    color: var(--cream);
+    font-family: 'Montserrat',sans-serif;
+    font-size: calc(12px + 0.9vw);
 }
 
-/* Style the footer */
-footer {
-    background-color: var(--black);
-    padding: 10px;
-    text-align: center;
-    color: white;
+.container {
+    display: inline-grid;
+    column-gap: 2%;
+    row-gap: 5%;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-areas:
+        "logo header . logout"
+        ". dropdown ui ui"
+        ". history history ."
+        "footer footer footer footer";
+    justify-items: center;
+    align-items: center;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.header {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: calc(48px + 0.9vw);
+    justify-self: start;
+}
+
+.logout {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.dropdown {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+}
+
+.ui {
+   grid-column: 3 / span 2;
+   grid-row: 2;
+}
+
+.history {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+    justify-self: start;
+    align-self: start;
+}
+
+.footer {
+    grid-column: 1 / span 4;
+    grid-row: 4;
+}
+
+.btn {
+    border: 2px solid var(--orange);
+    border-color: var(--orange);
+    border-radius: 5px;
+    background-color: var(--navy);
+    color: var(--orange);
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+.btn:hover {
+    background: var(--navy);
+    border-color: var(--rose);
+    color: var(--rose);
 }
