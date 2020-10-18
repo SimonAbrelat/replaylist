@@ -8,6 +8,8 @@
         <script src="./js/app.js"></script>
         <script>
         var s;
+        var history
+        var playlist
         (async () => {
             //console.log("Version 0.11");
             
@@ -17,8 +19,8 @@
 
             let plays = await getRePlaylists(s);
             let hist = await getHistory(s);
-            setPlaylists(plays);
-            setHistory(hist);
+            playlist = setPlaylists(plays);
+            history = setHistory(hist);
         })();
         </script>
     </head>

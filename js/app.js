@@ -19,37 +19,33 @@ async function getHistory(s) {
     return ret;
 }
 
-function setOptions(arr, id) {
-    let options = document.getElementById("playlists");
-    for (index in arr) {
-        let opt = document.createElement("option");
-        opt.text = arr[index].name;
-        options.appendChild(opt);
-    };    
-}
-
 function setPlaylists(arr) {
-    setOptions(arr, "playlists")
-    /*
     let options = document.getElementById("playlists");
     for (index in arr) {
         let opt = document.createElement("option");
         opt.text = arr[index].name;
         options.appendChild(opt);
     };
-    */
 }
 
 function setHistory(arr) {
-    setOptions(arr, "historys")
-    /*
-    let options = document.getElementById("histories");
-    for (index in arr) {
+    let hist = arr[0];
+    let options = document.getElementById("historys");
+    for (index in hist) {
         let opt = document.createElement("option");
-        opt.text = arr[index].name;
+        opt.text = hist[index].track.name;
         options.appendChild(opt);
-    };    
-    */
+    };
+}
+
+/*todo: get playlist from selected
+Spotify:track:6S1IgeHxxOT9qVWnmsdGxe
+3js3WNo60W35RQgBJDTj
+*/
+function addToPL() {
+    out = [];31
+    out.push("Spotify:track:6S1IgeHxxOT9qVWnmsdGxe")
+    s.addToPlayList("", out);
 }
 /*
 function createHistoryPL() {
@@ -60,5 +56,4 @@ function createHistoryPL() {
         addList.push(track.track.uri);
     }
     s.addToPlayList(list, addList)
-}
-*/
+} */

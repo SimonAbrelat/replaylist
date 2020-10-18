@@ -42,8 +42,7 @@ class Spotify {
                    .then(r => r.items);
     }
 
-    
-/*
+ 
     addToPlaylist(playlistID, uriList) {
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         fetch(url, {
@@ -56,7 +55,7 @@ class Spotify {
             body: uriList
         })
     }
-
+/*
     createPlaylist(playlistName, isPublic, isCollaborative, description) {
         var parameters = new Object();
         parameters.name = playlistName;
