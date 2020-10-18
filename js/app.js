@@ -1,8 +1,10 @@
 var s = null;
 var activePL = null;
 
-async function getRePlaylists(s) {
-    let totalList = await s.getPlaylists();
+function getRePlaylists(s) {
+    let totalList = (async () => {
+        return await s.getPlaylists()
+    })();
     let ourList = [];
     for (let i = 0; i < totalList.length; i++) {
         tags = totalList[i].description.split("#",2)
@@ -15,10 +17,9 @@ async function getRePlaylists(s) {
 
 function setPlaylists(playlists) {
     let options = document.getElementById("playlists");
-    for (play in playlists) {
+    for (index in playlists) {
         let opt = document.createElement("option");
-        opt.text = play.name;
-        //options.add(opt, options[0]);
+        opt.text = playlists[index].name;
         options.appendChild(opt);
     };
 }
