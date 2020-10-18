@@ -49,7 +49,7 @@ class Spotify {
         let uri = null;
         console.log(uriList)
         for (uri in uriList) {
-            encList.push(encodeURIComponent(uri));
+            encList.push(encodeURIComponent(uriList[uri]));
         }
         console.log(encList);
         fetch(url, {
