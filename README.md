@@ -1,21 +1,24 @@
+<img src="./res/logo.png" alt="Compress-Hension" width="200">
 # replaylist
 
 ## Inspiration
 
 Have you ever listened to an amazing radio station or queue on Spotify and wish you could have saved those songs? Was the process of rewinding song by song tedious and cumbersome? Do you wish you could add multiple songs to playlists at once? Don't you wish there was an easier way to access your listening history?  We know we have, and that's what inspired us to build replaylist.
 
-Spotify is one of the most widely used music streaming services, but it lacks various features we found essential. While Spotify keeps track of your listening history, there is no way to access it aside from repeatedly rewinding song-by-song! While this solution may be useful if you are wanting to find a song you listened to a few minutes ago, wanting to save a music session or queue is highly repetitive and inefficient. 
+A fetch system set up calls the [Spotify API][1] using OAuth2 to retrieve user listening history and modify playlists. The user then interacts with the backlog of listening history and selects songs to add to a playlist of choice.Spotify is one of the most widely used music streaming services, but it lacks various features we found essential. While Spotify keeps track of your listening history, there is no way to access it aside from repeatedly rewinding song-by-song! While this solution may be useful if you are wanting to find a song you listened to a few minutes ago, wanting to save a music session or queue is highly repetitive and inefficient. 
 
-We wanted to make Spotify a better tool for listening sessions, so users can save various sessions and have access to them whenever they want, rather than needing to rewind for minutes to find a specific song. Users would get a customizable approach to managing their listening history and deciding where to put their music, while also maintaining the individualized music Spotify recommends.
+## roadmap
+Future release ideas include various filtering and sorting capabilites.
+* implement advanced automatic and user-defined filtering
+* sort music by various audio features in Spotify's API
+* expand usage of custom tags
 
-## What it does
+## authors
+Simon Abrelat, David Gordon, Melissa Hernandez, Taleb Hirani
 
-Replaylist aims to reinvent how users interact with their music and how listening sessions are done. With replaylist, users can start listening sessions and at the end of the session, decide what songs to transfer to what playlist. Replaylist interacts with Spotify's API using user credentials attained through OAuth 2 to obtain and display the user's listening history securly.
+ʕ•ᴥ•ʔ
 
-## How we built it
-
-The core of the project's backend is Spotify's Web APIs. They offer many of the tools required to obtain access to a user's public and private playlists without intruding on their privacy, while also allowing replaylist to transfer songs in mass. 
-
+[1]:https://developer.spotify.com/documentation/web-api/
 On the other hand, the frontend is built using the classic trio of web development: HTML, CSS, and JavaScript. We implemented native JavaScript and made this application entirely client side, reducing many risks associated with external services such as replaylist. The content and website were hosted using Netlify's web hosting services to pull from our GitHub repository. 
 
 ## Challenges we ran into

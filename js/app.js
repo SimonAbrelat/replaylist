@@ -74,10 +74,8 @@ async function updatePL(s, play, curr) {
     const songs = await s.getSongsInPlaylist(play);
     for (let c in curr) {
         for (let x in songs) {
-            console.log(c)
-            console.log(x)
+            console.log(c);
         }
-        
         ret.push(track.uri);
     }
     addToPL(play, ret, s);
