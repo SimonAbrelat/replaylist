@@ -66,6 +66,18 @@ class Spotify {
                 'Authorization': 'Bearer ' + this.key
             }
         })
+
+        function addTag(plID) {
+        var url = "https://api.spotify.com/v1/playlists/" + playlistID
+        fetch(url, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + this.key
+            }
+        })
+        }
         /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         let uri = null;

@@ -55,7 +55,7 @@ function addToPL(s, play, arr) {
     let counter = 0;
     let out = []
     while (counter < arr.length) {
-        out.push(arr[counter])
+        //out.push(arr[counter])
         if (out.length == 5) {
             setTimeout(() => {
                 s.addToPlaylist(play, out);
