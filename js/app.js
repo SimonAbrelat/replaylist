@@ -56,6 +56,7 @@ function addToPL(play, arr, s) {
     let out = []
     while (counter < arr.length) {
         out.push(arr[counter])
+        console.log(arr[counter]);
         if ((counter + 1) % 5 == 0) {
             s.addToPlaylist(play, out);
             out = [];
@@ -72,14 +73,14 @@ function updatePL(s, play, curr) {
     let ret = [];
     const songs = s.getSongsInPlaylist(play);
     for (let x in songs) {
-        let comp = Date.parse(songs[x].added_at).getTime();
+        let comp = Date.parse(songs[x].added_at);
         if (comp > big) {
             big = comp;
         }
     }
     for (let c in curr) {
         let track = curr[c];
-        if (Date.parse(track.added_at).getTime() < big) {
+        if (Date.parse(track.added_at) < big) {
             continue;
         }
         let dup = false;
@@ -95,10 +96,7 @@ function updatePL(s, play, curr) {
         }
         ret.push(track.uri);
     }
-    //.filter((r, big) => {
-    //    r.
-    //}, 0);
-    //const new_tracks = curr[0].filter(t => t.)
+    addToPL(play, ret, s);
 }
 
 function addNewPL(allPLs, newName) {
