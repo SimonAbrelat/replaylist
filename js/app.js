@@ -55,6 +55,18 @@ function addToPL(play, arr, s) {
     let counter = 0;
     let out = []
     while (counter < arr.length) {
+        if (out.length == 5) {
+            setTimeout(() => {
+                s.addToPlaylist(play, out);
+                out = [];
+            }, 100)
+        }
+    }
+    if (out.length != 0) {
+        s.addToPlaylist(play, out)
+    }
+    /*
+    while (counter < arr.length) {
         out.push(arr[counter])
         console.log(arr[counter]);
         if ((counter + 1) % 5 == 0) {
@@ -68,6 +80,7 @@ function addToPL(play, arr, s) {
     if (counter % 5 != 0) {
         s.addToPlayList(play, out);
     }
+    */
 }
 
 function updatePL(s, play, curr) {
