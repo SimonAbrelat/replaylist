@@ -73,7 +73,7 @@ class Spotify {
         var newDesc = "replaylist# " + newPL.description
         var url = "https://api.spotify.com/v1/playlists/" + newPL.id
         fetch(url, {
-            method: "POST",
+            method: "PUT",
             mode: "cors",
             headers: {
                 'Accept': 'application/json',
