@@ -46,7 +46,7 @@ function getPLID(arr) {
     let target = document.getElementById("playlists").value
     for (idx in arr) {
         if (arr[idx].name == target) {
-            return arr[idx].id)
+            return arr[idx].id;
         }
     }
 }
