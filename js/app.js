@@ -51,7 +51,7 @@ function getPLID(arr) {
     }
 }
 
-function addToPL(play, arr, s) {
+function addToPL(s, play, arr) {
     let counter = 0;
     let out = []
     while (counter < arr.length) {
