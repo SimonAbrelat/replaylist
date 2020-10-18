@@ -44,7 +44,7 @@ Spotify:track:6S1IgeHxxOT9qVWnmsdGxe
 */
 function getPLID(arr) {
     let target = document.getElementById("playlists").value
-    for (idx in array) {
+    for (idx in arr) {
         if (arr[idx].name == target) {
             return arr[idx].uri
         }
