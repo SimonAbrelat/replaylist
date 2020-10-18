@@ -19,11 +19,11 @@ async function getRePlaylists() {
 
 function setPlaylists(playlists) {
     let options = document.getElementById("playlists");
-    playlists.forEach((x) => {
+    for (x in playlists) {
         let opt = document.createElement("option");
         opt.text = x.name;
         options.add(opt, options[0]);
-    });
+    };
 }
 /*
 function createHistoryPL() {
