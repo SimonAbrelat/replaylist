@@ -31,7 +31,7 @@ class Spotify {
     }
 
     getRecentlyPlayed() {
-        return this.get('https://api.spotify.com/v1/me/player/recently-played')
+        return this.get('https://api.spotify.com/v1/me/player/recently-played?limit=50')
         .then(function(result) {
             return result.items;
         })

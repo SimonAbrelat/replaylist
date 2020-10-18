@@ -23,7 +23,7 @@
 :root {
     background-color: var(--navy);
     color: var(--cream);
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: calc(12px + 0.9vw);
 }
 
@@ -47,6 +47,7 @@
 .logo {
     grid-column: 1;
     grid-row: 1;
+    justify-self: end;
 }
 
 .header {
@@ -54,6 +55,13 @@
     grid-row: 1;
     font-size: calc(48px + 0.9vw);
     justify-self: start;
+}
+
+h1 {
+    background: -webkit-linear-gradient(left,var(--rose), var(--orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: calc(48px + 0.9vw);
 }
 
 .logout {
@@ -82,6 +90,7 @@
 .footer {
     grid-column: 1 / span 4;
     grid-row: 4;
+    align-self: start;
 }
 
 .btn {
@@ -98,5 +107,28 @@
 .btn:hover {
     background: var(--navy);
     border-color: var(--rose);
+    color: var(--rose);
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+select option {
+    background-color: var(--black);
+    padding: 14px 28px;
+    color: var(--cream);
+    width: 60vmax;
+}
+
+select option:hover{
+    background-color: var(--rose);
+    color: var(--navy);
+}
+
+.hist {
     color: var(--rose);
 }

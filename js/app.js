@@ -13,13 +13,43 @@ async function getRePlaylists(s) {
     return ourList;
 }
 
-function setPlaylists(playlists) {
+async function getHistory(s) {
+    let ret = [];
+    await s.getRecentlyPlayed().then(r => ret.push(r))
+    return ret;
+}
+
+function setOptions(arr, id) {
     let options = document.getElementById("playlists");
-    for (index in playlists) {
+    for (index in arr) {
         let opt = document.createElement("option");
-        opt.text = playlists[index].name;
+        opt.text = arr[index].name;
+        options.appendChild(opt);
+    };    
+}
+
+function setPlaylists(arr) {
+    setOptions(arr, "playlists")
+    /*
+    let options = document.getElementById("playlists");
+    for (index in arr) {
+        let opt = document.createElement("option");
+        opt.text = arr[index].name;
         options.appendChild(opt);
     };
+    */
+}
+
+function setHistory(arr) {
+    setOptions(arr, "historys")
+    /*
+    let options = document.getElementById("histories");
+    for (index in arr) {
+        let opt = document.createElement("option");
+        opt.text = arr[index].name;
+        options.appendChild(opt);
+    };    
+    */
 }
 /*
 function createHistoryPL() {
