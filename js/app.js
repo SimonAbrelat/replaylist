@@ -105,8 +105,12 @@ function updatePL(s, play, curr) {
     addToPL(play, ret, s);
 }
 
-function addNewPL(allPLs, newName) {
-    for 
+function addNewPL(allPLs, newName, s) {
+    for (idx in allPLs) {
+        if (allPLs[idx].name == target) {
+            s.addTag(allPLs[idx].id)
+        }
+    } 
 }
 
 function logOut() {
