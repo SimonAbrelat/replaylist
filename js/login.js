@@ -2,7 +2,7 @@
 
 var client_id = "aaf992b285344c0a827bac7f722b8df4";
 var response_type = "token";
-var redirect_uri =  "https://simonabrelat.github.io/replaylist/redirect.html";
+var redirect_uri =  "https://replaylists.netlify.app/redirect.html";
 var scopes = ["user-read-recently-played"
                 ,"playlist-modify-public"
                 ,"playlist-read-private"
