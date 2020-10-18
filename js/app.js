@@ -95,6 +95,7 @@ function addNewPL(allPLs, s) {
     var target = window.prompt("Add replaylist tag to existing Playlist:", "Playlist Name");
     for (idx in allPLs) {
         if (allPLs[idx].name == target) {
+            console.log("match found")
             s.addTag(allPLs[idx])
             return
         }
