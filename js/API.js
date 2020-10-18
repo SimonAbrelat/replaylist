@@ -60,7 +60,7 @@ class Spotify {
         console.log(url);
         fetch(url, {
             method: "POST",
-            //mode: "cors",
+            mode: "cors",
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + this.key
