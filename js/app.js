@@ -94,6 +94,7 @@ async function updatePL(s, play, curr) {
 function addNewPL(allPLs, s) {
     var target = window.prompt("Add replaylist tag to existing Playlist:", "Playlist Name");
     for (idx in allPLs) {
+        console.log(allPLs[idx])
         if (allPLs[idx].name == target) {
             console.log("match found")
             s.addTag(allPLs[idx])
