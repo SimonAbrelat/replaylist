@@ -1,6 +1,6 @@
 (() => {
     const queryString = window.location.href;
-    arr = queryString.split("?")[1].split("&");
+    arr = queryString.split("#")[1].split("&");
     if (arr.length < 3) {
         alert("Login Failed.")
         location.assign("https://replaylists.netlify.app/");
