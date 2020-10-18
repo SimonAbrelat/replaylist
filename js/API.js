@@ -36,7 +36,7 @@ class Spotify {
             return r.items;
         })
     }
-
+/*
     addToPlaylist(playlistID, uriList) {
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         fetch(url, {
@@ -68,4 +68,5 @@ class Spotify {
             body: jsonParameters
         })
     }
+    */
 }
