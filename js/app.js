@@ -84,7 +84,8 @@ async function updatePL(s, play, curr) {
             }
         }
         if (!dup){
-            ret.push(track.uri);
+            console.log(curr[c]);
+            ret.push(curr[c].uri);
         }
     }
     addToPL(s, play, ret);

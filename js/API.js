@@ -67,7 +67,9 @@ class Spotify {
             }
         })
 
-        function addTag(newPL) {
+    }
+
+    addTag(newPL) {
         var newDesc = "replaylist# " + newPL.description
         var url = "https://api.spotify.com/v1/playlists/" + newPL.id
         fetch(url, {
@@ -81,8 +83,7 @@ class Spotify {
                 'description': newDesc
             }
         })
-        
-        }
+            
         /*
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         let uri = null;
