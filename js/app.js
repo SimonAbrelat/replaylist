@@ -67,7 +67,15 @@ function addToPL(play, arr, s) {
     }
 }
 
-function updatePL(){
+function updatePL(s, play, curr) {
+    const newest_add = s.getSongsInPlaylist(play)
+    //.filter((r, big) => {
+    //    r.
+    //}, 0);
+    //const new_tracks = curr[0].filter(t => t.)
+}
+
+function addNewPL(allPLs, newName) {
     
 }
 

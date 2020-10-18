@@ -41,6 +41,11 @@ class Spotify {
         return this.get('https://api.spotify.com/v1/users/' + this.user_id + '/playlists')
                    .then(r => r.items);
     }
+    
+    getSongsInPlaylist(playlistID) {
+        return this.get("https://api.spotify.com/v1/playlists/" + playlistID + "/tracks")
+                   .then(r => r.items);
+    }
 
  
     addToPlaylist(playlistID, uriList) {
