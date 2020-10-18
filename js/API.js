@@ -47,7 +47,8 @@ class Spotify {
         var url = "https://api.spotify.com/v1/playlists/" + playlistID + "/tracks";
         var encList = []
         let uri = null;
-        for (uri in uriList) {
+        console.log(uriList)
+        for (uri in uriList[0]) {
             encList.push(encodeURIComponent(uri));
         }
         console.log(encList);
