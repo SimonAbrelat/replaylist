@@ -4,7 +4,7 @@ var activePL = null;
 (async () => {
     let tok = sessionStorage.getItem("tok");
     let id = await getId(tok);
-    s = new Spotify(id, tok);
+    s = new Spotify(tok, id);
 }) ()
 
 async function getRePlaylists() {
