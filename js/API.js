@@ -77,10 +77,3 @@ class Spotify {
     }
     */
 }
-
-var s = new Spotify(null, null)
-(async () => {
-    let tok = sessionStorage.getItem("tok");
-    let id = await getId(tok);
-    s = new Spotify(tok, id);
-}) ()
