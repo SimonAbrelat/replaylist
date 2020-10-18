@@ -30,10 +30,8 @@ class Spotify {
     }
 
     getPlaylists() {
-        this.get('https://api.spotify.com/v1/users/' + this.user_id + '/playlists')
-        .then(function(result) {
-            return result.items;
-        })
+        return this.get('https://api.spotify.com/v1/users/' + this.user_id + '/playlists')
+                   .then(r => r.items);
     }
 /*
     addToPlaylist(playlistID, uriList) {
