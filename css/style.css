@@ -18,6 +18,7 @@
     --rose: #ba5e8c;
     --orange: #e89173;
     --cream: #ffead6;
+    --green: #82D173;
 }
 
 :root {
@@ -127,6 +128,18 @@ h1 {
 
 .btn:focus {
     border-color: var(--cream);
+}
+
+.pause:active {
+    background: var(--orange);
+    border-color: var(--cream);
+    color: var(--cream);
+}
+
+.record:active {
+    background: var(--rose);
+    border-color: var(--cream);
+    color: var(--cream);
 }
 
 img {
